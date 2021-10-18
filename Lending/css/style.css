@@ -1,0 +1,286 @@
+/* general styles */
+html{
+    font-size: 16px;
+
+}
+
+@media (max-width:1024px) {
+    html{    
+        font-size:15px;
+    } 
+}
+
+@media (max-width:767px) {
+    html{
+        font-size:14px;
+    }
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+h1{
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+h2{
+    font-size: 24px;
+    font-weight: bold;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.row{
+    display: flex;   
+}
+
+.row--center{
+    align-items: center;
+}
+
+.row--end{
+    justify-content: flex-end;
+}
+
+.row--around{
+    justify-content: space-around;
+
+}
+.row--between{
+    justify-content: space-between;
+}
+
+/* header */
+header{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: rgba(0, 0, 0, .4);
+}
+.menu{
+    display: flex;
+}
+
+.menu li{
+    margin-left: 36px;
+}
+
+.menu a{
+    color: #fff;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 300ms;
+}
+
+.menu a:hover{
+    color: #3c5700;
+
+}
+
+.section--main{
+    background: url(../img/main.jpg) no-repeat center;
+    min-height: 100vh;
+    background-size: cover;
+}
+
+.section--main .container,
+.section--main .row{
+    min-height: 100vh;
+}
+.main__info{
+    margin-top: 73px;
+    max-width: 650px;
+    padding: 40px 65px ;
+    background-color: rgba(101, 135, 29, .85);
+}
+
+.main__info p{
+    color: #ffffff;    
+}
+.section--recipe .container{
+    margin-top: 100px;
+}
+.section--recipe h2{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 26px;
+}
+.recipe{
+    color: #ffffff;    
+    display: flex;
+}
+
+.recipe--bg{
+    width: 90%;
+    background: #3c5700 url(../img/recipe.mask.png) no-repeat center;
+    background-size: cover;
+}
+.recipe__desc{
+    flex: 0 0 380px;
+    padding: 100px;
+    padding-top: 50px;
+}
+
+.recipe--bg .recipe__desc {
+    padding: 100px;
+}
+.recipe__book{
+    position: relative;
+}
+.recipe__book:after{
+    content: '';
+    width: 4px;
+    height: 115px;
+    background-color: #fdad00;
+    position: absolute;
+    left: 60px;
+}
+.recipe__info{
+    color: #3c5700;
+}
+
+/* benefits */
+.section--benefits{
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    background: #040714 url(../img/benefits.bg.jpg) no-repeat center;
+    background-size: cover;
+}
+.section--benefits h2{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+
+.section--benefits h2,
+.section--benefits p{
+    margin-bottom: 20px;
+}
+.benefits{
+    max-width: calc(550px + 1170px / 12);
+    padding-left: calc(1170px / 12);
+}
+ul.benefits__list{
+    margin-bottom: 30px;
+}
+.benefits__list li{
+    position: relative;
+    padding-left: 30px;
+}
+.benefits__list li::after{
+    content: '';
+    width: 10px;
+    height: 5px;
+    border-left: 1px solid #629304;
+    border-bottom: 1px solid #629304;
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    transform: rotate(-45deg);
+}
+
+
+.btn{
+    background: #66871e;
+    color: #fff;
+    border: none;
+    box-shadow: none;
+    text-decoration: none;
+    outline: none;
+    padding: 12px 60px;
+    font-size: 1rem;
+    line-height: 1.5;
+    display: inline-block;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background: #fdad00;
+
+}
+.btn:active{
+    background-color: #516b18;
+}
+
+.benefits__more,
+.benefits__close{
+    display: none;
+}
+/* eat--green */
+
+.section--eat--green{
+    padding-top: 30px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #66871e;
+    text-transform: uppercase;
+}
+
+.section--eat--green h2{
+    font-weight: 600;
+}
+
+.eat--green h2,
+.eat--green .eat--green__image{
+    margin-bottom: 30px;
+}
+.eat--green__image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 100px;
+}
+.eat--green__info{
+    position: relative;
+    flex: 1;
+}
+.eat--green__info:not(:first-child):after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 1px;
+    height: 70px;
+    background-color: #b2c38e;
+}
+
+.section--testimonials{
+    padding-top: 110px;
+    padding-bottom:130px;
+    background: #3c5700 url(../img/testimonials.jpg) no-repeat center;
+    background-size: cover;
+}
+footer{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #66871e;
+    font-size: 0.9375rem;
+    text-align: center;
+    color: #fff;
+}
+footer span{
+    margin-left: 10px;
+    margin-right: 10px;
+}
